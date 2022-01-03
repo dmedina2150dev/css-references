@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-element</title>
+    <style>
+        div {
+            width: 300px;
+            margin: 1rem;
+            padding: 0.5rem;
+        }
+        div::before {
+            content: "<3";
+            background-color: tomato;
+        }
+        div::after {
+            content: ":3";
+            background-color: thistle;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio aperiam maxime tempora voluptas dolore, minus, ratione dignissimos provident in omnis quibusdam deleniti corrupti impedit ad eveniet mollitia quae numquam eos!
+    </div>
+</body>
+</html>
