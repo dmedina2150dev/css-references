@@ -1,0 +1,12 @@
+div {
+    color: blue;
+    font-size: 52px;
+}
+
+.cuadrado {
+    height: 10cm;
+    width: 10cm;
+    background: steelblue;
+    color: white;
+    border: 2px solid black;
+}
