@@ -62,7 +62,7 @@ Utilizando la etiqueta HTML (<style></style>) esta va dentro del archivo HTML. A
 **Ventaja**
 > Poder replicar estilos en diferentes elementos HTML, donde los necesitemos.
 
-#### Exterño
+#### Externo
 Creamos un archivo, en algún directorio del proyecto al que este tenga acceso. Se declaran todos los estilos CSS. Y con la etiqueta <link> los enlazamos a los archivos HTML donde lo necesitemos. Esta etuqueta tiene un atributo [rel="stylesheet"] que simboliza la relación que tendra con el archivo. Y otro atributo [href=".../archivo.css"] donde indicaremos la ruta donde se encuentra el archivo.
 
 ````
