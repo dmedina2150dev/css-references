@@ -1,0 +1,35 @@
+[class] {
+    background-color: yellow;
+}
+
+[type] {
+    background-color: aqua;
+}
+
+[value] {
+    display: block;
+    width: 90%;
+    margin-top: 20px;
+}
+
+[type="text"] {
+    background-color: blue;
+}
+/** Colocar un filtro **/
+/* [value~="cursocss.com"] {
+    background-color: black;
+    color: whitesmoke;
+} */
+[value^="Aquí"] {
+    background-color: black;
+    color: whitesmoke;
+}
+[value$=".com"] {
+    background-color: gray;
+    color: whitesmoke;
+}
+
+[value*="cursocss.com"] {
+    background-color: pink;
+    color: black;
+}
