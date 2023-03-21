@@ -16,12 +16,14 @@ Las primeras 3 capas modifican el tamaño de la caja.
 - height
 - max-height
 - min-height
+  
 **Padding(Relleno)** 
 - padding (Shorthand)
 - padding-top
 - padding-right
 - padding-bottom
 - padding-left
+  
 **Border(Borde)** 
 - border (Shorthand)
 - border-top  (Shorthand)
