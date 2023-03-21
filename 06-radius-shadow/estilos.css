@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin: 50px;
+    color: purple;
+
+    /* border-radius: 30px; */
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 110px;
+    border-bottom-left-radius: 30px; */
+    /* border-radius: top-left | top-right | bottom-right | bottom-left; */
+    /* border-radius: 30px 10px 60px 110px;*/
+    border-radius: 50%;
+
+    box-shadow: 
+    5px 10px rgba(0, 0, 0, 0.3),
+    100px 250px 10px,
+    250px 480px plum;
+    
+}

@@ -47,6 +47,7 @@ Las primeras 3 capas modifican el tamaño de la caja.
 - border-left-color
 
 La utlima capa (Margin) permite establecer un margen o una separación en 4 direcciones del elemento. Esta es la unica capa del Box Model que no afecta el tamaño de la caja.
+
 **Margin(Margen)** 
 - margin
 - margin-top
