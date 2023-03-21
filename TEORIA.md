@@ -83,3 +83,99 @@ Creamos un archivo, en algún directorio del proyecto al que este tenga acceso. 
 }
 
 ````
+
+## Cascada
+Es una caracteristica de CSS, es la forma en la que se determina que selectores aplicaran los estilos, en caso de que exista más de un selector que cambie los estilos de un mismo elemento HTML.
+
+````
+h1 {
+    color: royalblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Este predomina al anterior */
+h1 {
+    color: crimson;
+    font-family: cursive;
+}
+
+/* Este predomina al anterior */
+h1 {
+    color: greenyellow;
+    color: black;
+}
+````
+> Se aplicara al elemento HTML el ultimo estilo declarado en la hoja de estilos.
+
+> LA CASCADA ES EL SEGUNDO METODO QUE UTILIZA CSS PARA DETERMINAR QUE ESTILOS SE APLICARAN A LOS ELEMENTOS, EN CASO DE EXISTIR MAS DE UN SELECTOR PARA EL MISMO ELEMENTO.
+
+> EL PRIMER METODO ES LA ESPECIFICIDAD
+
+
+## Especificidad CSS
+Es el metodo primordial que define que estilos se aplicaran, tiene mayor importancia que la cascada. La especificidad es el valor que se le da a los selectores en CSS. Cada selector tiene un valor diferente a otro, El selector con mayor especificidad es el selector del cual se mostraran los estilos.
+
+### Valores de la especificidad
+
+### Especificidad (1)
+> Los selectores de tipo y pseudoelementos son los selectores que tienen una especificidad de (1), es el selector con menos especificidad.
+
+### Especificidad (10)
+> Los selectores de clase, atributo y pseudoclases son los selectores que tienen una especificidad de (10)
+
+### Especificidad (100)
+> Los selectores de id son los selectores que tienen una especificidad de (100)
+
+
+> JUNTAR SELECTORES DE TIPO Y DE CLASE SUMA LOS VALORES DE ESPECIFICIDAD.
+> EN VSCODE PASAS EL MOUSE SOBRE EL SELECTOR Y YE DICE QUE ESPECIFICIDAD TIENE
+
+````
+/* Especificidad (10) */
+.title {
+    color: pink;
+}
+/* Especificidad (1) */
+h1 {
+    color: red;
+}
+
+/* Especificidad (11) */
+h1.title {
+    color: black;
+}
+````
+
+> Aunque es una mala practica existe un flag o un comodin que le podemos añadir a las propiedades que rompe la especificidad. (!important), no se recomienda utilizarlo porque puede causar problemas a largo plazo en proyectos mas grandes.
+`````
+h1 {
+    color: crimson!important;
+}
+`````
+
+
+## Herencia CSS
+Como dice la palabra nos permite heredar estilos, de los elementos padres. Oh dicho de otra forma es la caracteristica de CSS que permite heredarle estilos a los hijos de un contenedor.
+
+Tambien cabe aclarar que no todos los estilos son heredados por los hijos. Esto se puede ver al final del inspector de codigo del navegador.
+
+Se debe estar al pendiente, ya que esto nos serviria para reducir el codigo CSS, pero tambien podria causar problemas. Se debe estar muy pendiente de esto.
+
+> Para los estilos que no se hereden por defecto, pero aun asi los queremos utilizar podemos user como (valor) de la propiedad la palabra (inherit).
+
+````
+<body>
+    <h1 class="title" id="title">Hola, soy un titulo</h1>
+</body>
+
+body {
+    border: 3px solid orange;
+    font-family: sans-serif;
+    color: steelblue;
+}
+
+.title {
+    border: inherit;
+}
+````
+En el ejemplo anterior si inspeccionas en el navegador se vera como el (h1) hereda por defecto de (body) los estilos del color y la fuente, no asi el (border), utilizando el valor explicado podriamos usar esa propiedad heredada.
