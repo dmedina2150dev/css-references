@@ -155,6 +155,7 @@ h1 {
 
 
 ## Herencia CSS
+
 Como dice la palabra nos permite heredar estilos, de los elementos padres. Oh dicho de otra forma es la caracteristica de CSS que permite heredarle estilos a los hijos de un contenedor.
 
 Tambien cabe aclarar que no todos los estilos son heredados por los hijos. Esto se puede ver al final del inspector de codigo del navegador.
@@ -179,3 +180,27 @@ body {
 }
 ````
 En el ejemplo anterior si inspeccionas en el navegador se vera como el (h1) hereda por defecto de (body) los estilos del color y la fuente, no asi el (border), utilizando el valor explicado podriamos usar esa propiedad heredada.
+
+
+## Tipos de elementos en CSS
+En CSS y HTML existen dos tipos de cajas o elementos. Las cajas o elementos en Bloque y las cajas o elemento en lines.
+
+### Cajas en bloque
+Estas por defecto tienen como valor de la propiedad (display) en (block). 
+
+Caracteristicas para identificar cajas en bloque, por sus atributos por defecto, ya que estos pueden ser modificados:
+
+- Generan un saldo de linea, debido a que toma el 100% de su contenedor.
+- Pueden utilizar todas las propiedades del Box Model (Padding, width, border, height)
+
+### Cajas en linea
+Estas por defecto tienen como valor de la propiedad (display) en (inline).
+
+Caracteristicas para identificar cajas en linea, por sus atributos por defecto, ya que estos pueden ser modificados:
+
+- Se toman con texto. Y no generan salto de linea.
+- Ocupan solamente el espacio de su contenido.
+- Y no se le pueden aplicar propiedades del box model.
+- Se puede modificar.
+
+> **Nota**: Existe un valor para la propiedad (display) que es un ibrido entre (block) e (inline), que permite que los elementos sigan siendo en linea, pero se le puedan aplicar las propiedades del box model. Y es (inline-block)
