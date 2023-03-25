@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* .container {
+    padding: 40px;
+    background-color: aquamarine;
+    width: 80vw;
+    height: 80vh;
+} */
+.container {
+    padding: 40px;
+    background-color: aquamarine;
+    width: 300px;
+    border: 1px solid #000;
+
+}
+.container-child {
+    width: 50%;
+    background-color: black;
+    color: antiquewhite;
+}
+
+/** 1rem = 20px **/
+.title {
+    font-size: 3rem;
+}
+
+.container-child {
+    font-size: 10px;
+}
+
+/** 1em = 10px **/
+.title {
+    font-size: 3em; /** 10*3 = 30px **/
+
+    /** 30*5 = 150px **/
+    width: 5em;
+}

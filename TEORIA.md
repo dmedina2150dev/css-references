@@ -194,6 +194,7 @@ Caracteristicas para identificar cajas en bloque, por sus atributos por defecto,
 - Pueden utilizar todas las propiedades del Box Model (Padding, width, border, height)
 
 ### Cajas en linea
+
 Estas por defecto tienen como valor de la propiedad (display) en (inline).
 
 Caracteristicas para identificar cajas en linea, por sus atributos por defecto, ya que estos pueden ser modificados:
@@ -204,3 +205,68 @@ Caracteristicas para identificar cajas en linea, por sus atributos por defecto, 
 - Se puede modificar.
 
 > **Nota**: Existe un valor para la propiedad (display) que es un ibrido entre (block) e (inline), que permite que los elementos sigan siendo en linea, pero se le puedan aplicar las propiedades del box model. Y es (inline-block)
+
+
+## Unidades de medida
+En CSS tenemos dos tipos de unidades de medida.
+
+### Absolutas
+Se llama de esta forma porque tiene un valor definido y ese valor no depende de nada más. Siempre sera el mismo por lo que nunca va a cambiar. Entre estas tenemos los pixeles (px), los centimetros (cm), los puntos (pt) y tambien los milimeros (mm).
+
+````
+.title {
+    font-size: 50px;
+}
+.title {
+    font-size: 50cm;
+}
+.title {
+    font-size: 50pt;
+}
+.title {
+    font-size: 50mm;
+}
+````
+
+### De longitud relativa
+Se llaman de esta forma porque su tamaño depende de algo externo a ellas. Significa que ese valor puede cambiar dependiendo el contexto. 
+
+Entre ellas tenemos la unidad (rem) esta es relativa al tamaño de la fuente o font-size de la raiz del documento, se puede visualizar en el selector (html) y por defecto 1rem es igual a 16px. Puede llegar a variar por el tamaño de fuente o letra que agreges en el navegador en sus configuraciones.
+
+````
+/** 1rem = 20px **/
+.title {
+    font-size: 3rem;
+}
+````
+
+Tambien tenemos la unidad (em), la diferencia con (rem) es que rem es relativo al tamaño de la fuente del navegador y (em) es relativo al tamaño de fuente del padre o de un ansestro superior que tenga declarado un font-size. Pero para propiedades que que no sean font-size, como width igual toma el valor relativo del padre mas cercano, pero si el selector donde esta declarado tiene un font-size declarado el valor relativo lo toma de este.
+
+````
+.container-child {
+    font-size: 10px;
+}
+
+/** 1em = 10px **/
+.title {
+    font-size: 3em; /** 10*3 = 30px **/
+
+    /** 30*5 = 150px **/
+    width: 5em;
+}
+````
+
+### Las viewport
+Estas unidades son relativas al viewport del navegador. El viewport es el area visible que podemos observar en el navegador. Estas se utilizan anteponiendo la (v) y luego la medida sea width(vw) o heigth(vh). Tenemos disponible valores desde 0 a 100.
+
+````
+.container {
+
+    background-color: aquamarine;
+    width: 80vw;
+    height: 80vh;
+}
+````
+
+### Los porcentajes
+Son relativos al tamaño del padre del elemento al que estamos dando el porcentaje (%).
