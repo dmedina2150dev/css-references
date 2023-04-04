@@ -269,4 +269,13 @@ Estas unidades son relativas al viewport del navegador. El viewport es el area v
 ````
 
 ### Los porcentajes
-Son relativos al tamaño del padre del elemento al que estamos dando el porcentaje (%).
+Son relativos al tamaño del padre del elemento al que estamos dando el porcentaje (%). Que por defecto todos los elementos en bloque tienen un width de 100%.
+
+Pasa algo parecido con el el height, si el padre del elemento no tiene definido un height este no funcionara.
+````
+.container-child {
+    width: 50%;
+    background-color: black;
+    color: antiquewhite;
+}
+````
