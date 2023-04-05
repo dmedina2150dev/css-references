@@ -8,4 +8,4 @@ Tanto las filas como las columnas tiene una linea de inicio y una linea final.
 Una vez que se crea la grid que es la suma de filas y columnas, se crean celdas. Para empezar a entender mejor GRID, se debe ver como una cuadricula compuesta de muchas celdas, al principio los grid-items ocuparan celda por cada grid-item
 
 
-![Imagen de Lineas CSS GRID] (./14-grid/img/grid4.png) {width='100px'}
+![](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png){width='100px'}
