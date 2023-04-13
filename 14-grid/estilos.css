@@ -9,36 +9,98 @@ body {
 
 .container {
     width: 90%;
-    height: 600px;
+    height: 1200px;
     outline: 2px solid;
     margin: 40px auto;
+
+    display: grid;
+    /* grid-template-columns: 30% 50px 100px;
+    grid-template-rows: 100px 200px  20%; */
+    /* grid-auto-rows: auto; */
+    /* grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(10, 10%); */
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    /* grid-template-columns: repeat(5, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* grid-template-rows: repeat(5, 1fr); */
+    /* row-gap: 1em;
+    column-gap: 1.5em; 
+    */
+    gap: 10px;
+
+    /* grid-template-areas:
+        "elem1 elem1 elem1 elem2 elem2"
+        "elem1 elem1 elem1 elem2 elem2"
+        "elem3 elem3 elem3 elem2 elem2"
+        "elem3 elem3 elem3 elem2 elem2"
+        "elem4 elem4 elem4 elem4 ."
+    ; */
+
+
 }
 
 .item {
-    width: 100px;
-    height: 100px;
+    /* width: 100px;
+    height: 100px; */
     color: #FFF;
     font-size: 2em;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-position: center;
+    background-size: cover;
 }
 
 .item1 {
     background-color: steelblue;
+    background-image: url('./img/image1.jpg');
+    /* grid-column: 1 / 4;
+    grid-row: 1 / 3; 
+    grid-area: elem1;*/
 }
+
 .item2 {
     background-color: deeppink;
+    background-image: url('./img/image2.jpg');
+    /* grid-column: 4 / 6;
+    grid-row: 1 / 5; 
+    grid-area: elem2;*/
 }
+
 .item3 {
     background-color: seagreen;
+    background-image: url('./img/image3.jpg');
+    /* grid-column: 1 / 4;
+    grid-row: 3 / 5; 
+    grid-area: elem3;*/
 }
+
 .item4 {
     background-color: brown;
+    background-image: url('./img/image4.jpg');
+    /* grid-column: 1 / -1;
+    grid-row: 5 / -1; 
+    grid-area: elem4;*/
 }
+
 .item5 {
     background-color: cornflowerblue;
+    background-image: url('./img/image5.jpg');
 }
+
 .item6 {
     background-color: rebeccapurple;
+    background-image: url('./img/image6.jpg');
 }
+
+/* @media (min-width:700px) {
+    .container {
+        grid-template-areas:
+            "elem1 elem1 elem1 elem2 elem2"
+            "elem1 elem1 elem1 elem2 elem2"
+            "elem3 elem3 elem3 elem2 elem2"
+            "elem3 elem3 elem3 elem2 elem2"
+            "elem4 elem4 elem4 elem2 elem2"
+        ;
+    }
+} */
