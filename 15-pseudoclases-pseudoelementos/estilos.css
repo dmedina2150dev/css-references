@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Arial';
+}
+
+/* html {
+    background-color: steelblue;
+}
+:root {
+    background-color: tomato;
+} */
+
+.link {
+    margin: 50px;
+    display: inline-block;
+    background-color: slateblue;
+    color: #FFF;
+    text-decoration: none;
+    padding: 1em 2em;
+    border-radius: 2em;
+    transition: .3s;
+}
+
+.link:active {
+    background-color: blueviolet;
+    transform: translateY(10px);
+}
+
+/* .element1 {
+    background-color: tomato;
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+    transition: .5s;
+}
+
+.element1:target {
+    transform: translateX(100%);
+} */
+
+
+.check {
+    margin: 50px 20px;
+}
+
+.check:checked + .label {
+    background-color: green;
+}
+
+.label {
+    background-color: crimson;
+    color: whitesmoke;
+    padding: 20px 15px;
+}
+
+
