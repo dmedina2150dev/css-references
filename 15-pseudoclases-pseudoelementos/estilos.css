@@ -55,6 +55,58 @@ body {
     background-color: crimson;
     color: whitesmoke;
     padding: 20px 15px;
+    transition: .3s;
 }
 
 
+.input {
+    width: 250px;
+    height: 50px;
+    margin: 50px;
+}
+
+.input:focus {
+    color: #FFF;
+    background-color: #000;
+}
+
+
+.element1 {
+    background-color: tomato;
+    width: max-content;
+    font-size: 2rem;
+    color: whitesmoke;
+    margin: 50px;
+}
+
+.element1::before {
+    content: "";
+}
+.element1::after  {
+    content: "";
+}
+
+.validacion {
+    padding: .5em 2em;
+    margin: 50px;
+    font-size: 1rem;
+}
+
+.validacion + .message::after {
+    content: "Felicidades has ingresado un texto";
+    display: block;
+    background-color: green;
+    padding: 1em;
+    color: #FFF;
+    margin: auto;
+    width: max-content;
+}
+.validacion:placeholder-shown + .message::after {
+    content: "Aún no has escrito nada en el input";
+    display: block;
+    background-color: crimson;
+    padding: 1em;
+    color: #FFF;
+    margin: auto;
+    width: max-content;
+}
