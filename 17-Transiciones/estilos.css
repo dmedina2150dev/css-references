@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial';
+}
+
+.container {
+    border: 1px solid;
+}
+
+.element {
+    margin: 150px;
+    width: 200px;
+    height: 200px;
+    background-color: tomato;
+
+    /* transition: .5s; */
+    /* transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    transition-delay: 1000ms; */
+    transition: background-color, transform .5s linear 1s;
+}
+
+.container:hover .element {
+    background-color: black;
+    transform: translate(100%, 100%) scale(1.3) rotate(80deg);
+} 
