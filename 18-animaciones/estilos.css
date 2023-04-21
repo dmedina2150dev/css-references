@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial';
+    display: flex;
+    height: 100vh;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    margin: 60px;
+    background-color: tomato;
+    animation-name: cambiar-color;
+    /* animation-name: grow; */
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* animation-direction: alternate-reverse; */
+    animation-fill-mode: both;
+    animation-delay: 2s;
+
+    animation: cambiar-color 1s linear infinite alternate 2s paused; 
+}
+
+.box:hover {
+    animation-play-state: paused;
+}
+
+/* @keyframes cambiar-color {
+    from {
+        width: 250px;
+        background-color: #000;
+    }
+    to {
+        width: 300px;
+         background-color: purple;
+    } 
+}*/
+
+@keyframes cambiar-color {
+    0% {
+        transform: translate(0);
+        background-color: crimson;
+    }
+
+    25% {
+        transform: translate(100%);
+        background-color: salmon;
+    }
+
+    50% {
+        transform: translate(100%, 100%);
+        background-color: slateblue;
+    }
+
+    57% {
+        transform: translate(0, 100%);
+        background-color: teal;
+    }
+
+    100% {
+        transform: translate(0);
+        background-color: black;
+    }
+}
+
+@keyframes grow {
+    0% {
+       transform: scale(1); 
+    }
+    100% {
+       transform: scale(2.8); 
+    }
+}
+
+.bell {
+    background-color: #3D3DCF;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 8px;
+    display: flex;
+}
+
+.bell__item {
+    margin: auto;
+    width: 80px;
+    animation: infinite campana 1s;
+}
+
+@keyframes campana {
+    0% {
+        transform: rotate(30deg);
+    }
+    25% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-30deg);
+    }
+    75% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(30deg);
+    }
+}
